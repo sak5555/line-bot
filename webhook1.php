@@ -22,7 +22,7 @@ if (!is_null($events['events'])) {
 
 			// Build message to reply back
 			
-			if ($events['events'][0]['message']['text']='Hemophilia'){
+			if ($events['events'][0]['message']['text']=='Hemophilia'){
 				$messages = [
 				'type' => 'text',
 				'text' => 'ขอต้อนรับท่านสู่ระบบ การลงทะเบียน Hemophilia'
@@ -33,6 +33,7 @@ if (!is_null($events['events'])) {
 				'type' => 'text',
 				'text' => $text
 			];
+
 			}
 
 			// Make a POST Request to Messaging API to reply to sender
