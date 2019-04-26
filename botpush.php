@@ -13,7 +13,7 @@ $pushID = 'Ua253b7919521feaf4290b34bb0fa6902';
 $httpClient = new \LINE\LINEBot\HTTPClient\CurlHTTPClient($access_token);
 $bot = new \LINE\LINEBot($httpClient, ['channelSecret' => $channelSecret]);
 
-$textMessageBuilder = new \LINE\LINEBot\MessageBuilder\TextMessageBuilder('ÍéÒÇ á¹è¹Í¹ äÁèä´éà¢ÕÂ¹â»Ãá¡ÃÁà¾ÔèÁ');
+$textMessageBuilder = new \LINE\LINEBot\MessageBuilder\TextMessageBuilder('à¸­à¹‰à¸²à¸§ à¹à¸™à¹ˆà¸™à¸­à¸™ à¹„à¸¡à¹ˆà¹„à¸”à¹‰à¹€à¸‚à¸µà¸¢à¸™à¹‚à¸›à¸£à¹à¸à¸£à¸¡à¹€à¸žà¸´à¹ˆà¸¡');
 $response = $bot->pushMessage($pushID, $textMessageBuilder);
 
 echo $response->getHTTPStatus() . ' ' . $response->getRawBody();
