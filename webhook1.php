@@ -22,8 +22,8 @@ if (!is_null($events['events'])) {
 
 			// Build message to reply back
 			
-			if ($events['events'][0]['message']['text']=='Hemophilia'){
-				$url = 'http://cs5.chi.or.th/hemo/mainclass.asp';
+		//	if ($events['events'][0]['message']['text']=='Hemophilia'){
+				$url = 'http://cs5.chi.or.th/hemo/testlinebot.asp';
 				$myvars = 'myvar1=' . $myvar1 . '&myvar2=' . $myvar2;
 				$ch = curl_init( $url );
 				curl_setopt( $ch, CURLOPT_POST, 1);
@@ -36,16 +36,16 @@ if (!is_null($events['events'])) {
 
 				$messages = [
 				'type' => 'text',
-				'text' => 'ขอต้อนรับท่านสู่ระบบ การลงทะเบียน Hemophilia'.$response
+				'text' => $response
 				];
-			}
-			else {
-			$messages = [
-				'type' => 'text',
-				'text' => $text
-			];
+		//	}
+		//	else {
+		//	$messages = [
+		//		'type' => 'text',
+		//		'text' => $text
+		//	];
 
-			}
+		//	}
 
 			// Make a POST Request to Messaging API to reply to sender
 			$url = 'https://api.line.me/v2/bot/message/reply';
