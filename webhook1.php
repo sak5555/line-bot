@@ -23,9 +23,20 @@ if (!is_null($events['events'])) {
 			// Build message to reply back
 			
 			if ($events['events'][0]['message']['text']=='Hemophilia'){
+				$url = 'http://cs5.chi.or.th/hemo/mainclass.asp';
+				$myvars = 'myvar1=' . $myvar1 . '&myvar2=' . $myvar2;
+				$ch = curl_init( $url );
+				curl_setopt( $ch, CURLOPT_POST, 1);
+				curl_setopt( $ch, CURLOPT_POSTFIELDS, $myvars);
+				curl_setopt( $ch, CURLOPT_FOLLOWLOCATION, 1);
+				curl_setopt( $ch, CURLOPT_HEADER, 0);
+				curl_setopt( $ch, CURLOPT_RETURNTRANSFER, 1);
+
+				$response = curl_exec( $ch );
+
 				$messages = [
 				'type' => 'text',
-				'text' => 'ขอต้อนรับท่านสู่ระบบ การลงทะเบียน Hemophilia'
+				'text' => 'ขอต้อนรับท่านสู่ระบบ การลงทะเบียน Hemophilia'.$response
 				];
 			}
 			else {
