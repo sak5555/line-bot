@@ -53,7 +53,7 @@ if (!is_null($events['events'])) {
 					'originalContentUrl'=> 'https://mokmoon.com/images/LINEDevelopers.png',
 					'previewImageUrl'=> 'https://mokmoon.com/images/LINEDEV.png'
 					];
-					{
+				}
 				else {
 					$messages = [
 					'type' => 'text',
