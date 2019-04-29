@@ -25,7 +25,8 @@ if (!is_null($events['events'])) {
 		//	if ($events['events'][0]['message']['text']=='Hemophilia'){
 				$myvar1=$event['source']['userId'];
 				$myvar2=$events['events'][0]['message']['text'];
-				$url = 'http://cs5.chi.or.th/hemo/testlinebot.asp?myvar1='.$myvar1 . '&myvar2=' . $myvar2;
+				//$url = 'http://cs5.chi.or.th/hemo/testlinebot.asp?myvar1='.$myvar1 . '&myvar2=' . $myvar2;
+				$url = 'http://cs5.chi.or.th/hemo/testlinebot.asp';
 				
 				$myvars = 'myvar1=' . $myvar1 . '&myvar2=' . $myvar2;
 				$ch = curl_init( $url );
