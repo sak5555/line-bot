@@ -38,11 +38,11 @@ if (!is_null($events['events'])) {
 
 				$response = curl_exec( $ch );
 
-				//$messages = [
-				//'type' => 'text',
-				//'text' => $response
-				//];
-				$messages=$response;		
+				$messages = [
+				'type' => 'text',
+				'text' => $response
+				];
+						
 		
 
 			// Make a POST Request to Messaging API to reply to sender
