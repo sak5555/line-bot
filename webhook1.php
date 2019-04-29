@@ -16,7 +16,7 @@ if (!is_null($events['events'])) {
 		// Reply only when message sent is in 'text' format
 		if ($event['type'] == 'message' && $event['message']['type'] == 'text') {
 			// Get text sent
-			$text = 'สวัสดี ID คุณคือ '.$event['source']['userId'].$events['events'][0]['message']['text'];
+			$text = 'สวัสดี ID คุณคือ '.$event['source']['userId']  //.$events['events'][0]['message']['text'];
 			// Get replyToken
 			$replyToken = $event['replyToken'];
 
@@ -24,6 +24,8 @@ if (!is_null($events['events'])) {
 			
 		//	if ($events['events'][0]['message']['text']=='Hemophilia'){
 				$url = 'http://cs5.chi.or.th/hemo/testlinebot.asp';
+				$myvar1=$event['source']['userId'];
+				$myvar2=$events['events'][0]['message']['text'];
 				$myvars = 'myvar1=' . $myvar1 . '&myvar2=' . $myvar2;
 				$ch = curl_init( $url );
 				curl_setopt( $ch, CURLOPT_POST, 1);
