@@ -23,9 +23,10 @@ if (!is_null($events['events'])) {
 			// Build message to reply back
 			
 		//	if ($events['events'][0]['message']['text']=='Hemophilia'){
-				$url = 'http://cs5.chi.or.th/hemo/testlinebot.asp';
 				$myvar1=$event['source']['userId'];
 				$myvar2=$events['events'][0]['message']['text'];
+				$url = 'http://cs5.chi.or.th/hemo/testlinebot.asp?myvar1='.$myvar1 . '&myvar2=' . $myvar2;
+				
 				$myvars = 'myvar1=' . $myvar1 . '&myvar2=' . $myvar2;
 				$ch = curl_init( $url );
 				curl_setopt( $ch, CURLOPT_POST, 1);
