@@ -38,18 +38,12 @@ if (!is_null($events['events'])) {
 
 				$response = curl_exec( $ch );
 
-				$messages = [
-				'type' => 'text',
-				'text' => $response
-				];
-		//	}
-		//	else {
-		//	$messages = [
-		//		'type' => 'text',
-		//		'text' => $text
-		//	];
-
-		//	}
+				//$messages = [
+				//'type' => 'text',
+				//'text' => $response
+				//];
+				$messages=$response;		
+		
 
 			// Make a POST Request to Messaging API to reply to sender
 			$url = 'https://api.line.me/v2/bot/message/reply';
