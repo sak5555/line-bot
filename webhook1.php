@@ -38,11 +38,21 @@ if (!is_null($events['events'])) {
 
 				$response = curl_exec( $ch );
 
-				$messages = [
-				'type' => 'text',
-				'text' => $response
-				];
-						
+				
+					
+				if ($myvar2=='st'){
+					$messages = [
+					'type' => 'sticker',
+					'packageId'=> '2',
+					'stickerId'=> '34'
+					];
+				}
+				else {
+					$messages = [
+					'type' => 'text',
+					'text' => $response
+					];
+				}
 		
 
 			// Make a POST Request to Messaging API to reply to sender
